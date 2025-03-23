@@ -26,7 +26,7 @@ RUFF=ruff
 PYTEST=pytest
 ACTIVATE=. .venv/bin/activate
 
-.PHONY: install tests lint format
+.PHONY: install tests lint format clean
 
 install:
 	$(PYTHON) -m venv .venv
