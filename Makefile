@@ -42,7 +42,7 @@ format:
 	$(ACTIVATE) && $(RUFF) format .
 
 clean:
-	rm -rf .venv
+	rm -rf .venv dist *.egg-info
 	find . -type d -name "*.pyc" -exec rm -r {} +
 	find . -type d -name "__pycache__" -exec rm -r {} +
 	find . -type d -name ".ruff_cache" -exec rm -r {} +
