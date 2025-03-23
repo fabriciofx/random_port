@@ -18,7 +18,7 @@ in your project folder.
 
 ## Usage
 
--  To a TCP random port:
+- To a TCP random port:
 
 ```python
 port = RandomTcpPort().value()
@@ -29,7 +29,6 @@ port = RandomTcpPort().value()
 ```python
 port = RandomUdpPort().value()
 ```
-
 
 ## License
 
