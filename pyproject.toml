@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "random_port"
-version = "0.0.2"
+version = "0.0.3"
 description = "Generate a free TCP or UDP random port"
 authors = [{ name = "Fabrício Barros Cabral", email = "fabriciofx@gmail.com" }]
 readme = "README.md"
