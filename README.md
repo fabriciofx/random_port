@@ -18,16 +18,20 @@ in your project folder.
 
 ## Usage
 
-- To a TCP random port:
+- To use a TCP random port:
 
 ```python
-port = RandomTcpPort().value()
+from random_port.core import TcpRandomPort
+
+port = TcpRandomPort().value()
 ```
 
-- To a UDP random port:
+- To use a UDP random port:
 
 ```python
-port = RandomUdpPort().value()
+from random_port.core import UdpRandomPort
+
+port = UdpRandomPort().value()
 ```
 
 ## License
