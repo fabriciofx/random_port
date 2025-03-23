@@ -5,5 +5,5 @@ __pycache__/
 build/
 dist/
 certificates/
-fake_https_server.egg-info/
+*.egg-info/
 .DS_Store
