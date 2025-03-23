@@ -21,7 +21,7 @@
 # SOFTWARE.
 import socket
 
-from random_port import TcpRandomPort, UdpRandomPort
+from random_port.core import TcpRandomPort, UdpRandomPort
 
 
 def test_tcp_random_port() -> None:
