@@ -47,9 +47,9 @@ def test_tcp_in_use() -> None:
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.setblocking(False)
     server.bind((host, begin))
-    free_port = TcpRandomPort(host, begin, end).value()
-    assert free_port == end
+    port = TcpRandomPort(host, begin, end).value()
     server.close()
+    assert port == end
 
 
 def test_udp_in_use() -> None:
@@ -59,6 +59,6 @@ def test_udp_in_use() -> None:
     server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     server.setblocking(False)
     server.bind((host, begin))
-    free_port = UdpRandomPort(host, begin, end).value()
-    assert free_port == end
+    port = UdpRandomPort(host, begin, end).value()
     server.close()
+    assert port == end
