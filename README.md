@@ -21,7 +21,7 @@ in your project folder.
 - To use a TCP random port:
 
 ```python
-from random_port.core import TcpRandomPort
+from random_port.pool import TcpRandomPort
 
 port = TcpRandomPort().value()
 ```
@@ -29,7 +29,7 @@ port = TcpRandomPort().value()
 - To use a UDP random port:
 
 ```python
-from random_port.core import UdpRandomPort
+from random_port.pool import UdpRandomPort
 
 port = UdpRandomPort().value()
 ```
