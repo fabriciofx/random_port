@@ -20,7 +20,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 import socket
+
 from random_port.pool import TcpRandomPort, UdpRandomPort
+
 
 def test_tcp_random_port() -> None:
     begin = 1024
@@ -29,12 +31,14 @@ def test_tcp_random_port() -> None:
     assert port >= begin
     assert port <= end
 
+
 def test_udp_random_port() -> None:
     begin = 1024
     end = 65535
     port = UdpRandomPort().value()
     assert port >= begin
     assert port <= end
+
 
 def test_tcp_in_use() -> None:
     host = "127.0.0.1"
@@ -46,6 +50,7 @@ def test_tcp_in_use() -> None:
     port = TcpRandomPort(host, begin, end).value()
     server.close()
     assert port == end
+
 
 def test_udp_in_use() -> None:
     host = "127.0.0.1"
