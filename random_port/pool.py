@@ -23,7 +23,6 @@ import random
 import socket
 from abc import ABC, abstractmethod
 
-
 class RandomPort(ABC):
     @abstractmethod
     def value(self) -> int:
