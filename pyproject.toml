@@ -20,3 +20,9 @@ addopts = "-n auto"
 
 [dependency-groups]
 dev = ["pytest-xdist>=3.8.0"]
+
+[tool.setuptools.packages.find]
+include = ["random_port"]
+
+[tool.setuptools]
+package-data = { "random_port" = ["py.typed"] }
