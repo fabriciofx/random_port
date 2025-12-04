@@ -10,8 +10,8 @@ requires-python = ">=3.14"
 dependencies = []
 
 [project.urls]
-homepage = "https://github.com/fabriciofx/random_port"
-bug-tracker = "https://github.com/fabriciofx/random_port/issues"
+homepage = "https://github.com/fabriciofx/random-port"
+bug-tracker = "https://github.com/fabriciofx/random-port/issues"
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
