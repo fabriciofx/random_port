@@ -30,7 +30,7 @@ class Port(ABC):
         pass
 
 
-class TcpRandomPort(Port):
+class RandomTcpPort(Port):
     def __init__(
         self, host: str = "127.0.0.1", begin: int = 1024, end: int = 65536
     ) -> None:
@@ -53,7 +53,7 @@ class TcpRandomPort(Port):
         return port
 
 
-class UdpRandomPort(Port):
+class RandomUdpPort(Port):
     def __init__(
         self, host: str = "127.0.0.1", begin: int = 1024, end: int = 65536
     ) -> None:
