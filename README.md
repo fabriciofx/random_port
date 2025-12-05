@@ -4,7 +4,7 @@
 
 Usually we need start a TCP or UDP server (mainly to use in tests) but, which
 port must be used? So, random-port is the answer. It generate a free random
-TCP or UDP port to be used for any server.
+or fixed TCP/UDP port to be used for any server.
 
 ## How to install
 
@@ -18,12 +18,12 @@ in your project folder.
 
 ## Usage
 
-- To use a random TCP port:
+- To use a TCP random port:
 
 ```python
 from random_port.pool import TcpRandomPort
 
-port = RandomTcpPort().value()
+port = TcpRandomPort().value()
 ```
 
 - To use a random UDP port:
@@ -31,25 +31,23 @@ port = RandomTcpPort().value()
 ```python
 from random_port.pool import UdpRandomPort
 
-port = RandomUdpPort().value()
+port = UdpRandomPort().value()
 ```
 
 - To use a fixed TCP port:
 
 ```python
-from random_port.pool import UdpRandomPort
+from random_port.pool import TcpPort
 
 port = TcpPort(12345).value()
-
 ```
 
 - To use a fixed UDP port:
 
 ```python
-from random_port.pool import UdpRandomPort
+from random_port.pool import UdpPort
 
 port = UdpPort(12345).value()
-
 ```
 
 ## License

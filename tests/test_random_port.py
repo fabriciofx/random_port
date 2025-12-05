@@ -22,25 +22,25 @@
 import socket
 
 from random_port.pool import (
-    RandomTcpPort,
-    RandomUdpPort,
     TcpPort,
+    TcpRandomPort,
     UdpPort,
+    UdpRandomPort,
 )
 
 
-def test_random_tcp_port() -> None:
+def test_tcp_random_port() -> None:
     begin = 1024
     end = 65535
-    port = RandomTcpPort().value()
+    port = TcpRandomPort().value()
     assert port >= begin
     assert port <= end
 
 
-def test_random_udp_port() -> None:
+def test_udp_random_port() -> None:
     begin = 1024
     end = 65535
-    port = RandomUdpPort().value()
+    port = UdpRandomPort().value()
     assert port >= begin
     assert port <= end
 
@@ -52,7 +52,7 @@ def test_tcp_in_use() -> None:
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.setblocking(False)
     server.bind((host, begin))
-    port = RandomTcpPort(host, begin, end).value()
+    port = TcpRandomPort(host, begin, end).value()
     server.close()
     assert port == end
 
@@ -64,7 +64,7 @@ def test_udp_in_use() -> None:
     server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     server.setblocking(False)
     server.bind((host, begin))
-    port = RandomUdpPort(host, begin, end).value()
+    port = UdpRandomPort(host, begin, end).value()
     server.close()
     assert port == end
 
