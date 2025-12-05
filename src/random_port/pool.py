@@ -77,9 +77,7 @@ class RandomUdpPort(Port):
 
 
 class TcpPort(Port):
-    def __init__(
-        self, num: int, host: str = "127.0.0.1"
-    ) -> None:
+    def __init__(self, num: int, host: str = "127.0.0.1") -> None:
         self.__host = host
         self.__num = num
 
@@ -98,9 +96,7 @@ class TcpPort(Port):
 
 
 class UdpPort(Port):
-    def __init__(
-        self, num: int, host: str = "127.0.0.1"
-    ) -> None:
+    def __init__(self, num: int, host: str = "127.0.0.1") -> None:
         self.__host = host
         self.__num = num
 
@@ -112,6 +108,7 @@ class UdpPort(Port):
                 except OSError:
                     return True
                 return False
+
         while is_udp_port_in_use(self.__host, self.__num):
             pass
         return self.__num
